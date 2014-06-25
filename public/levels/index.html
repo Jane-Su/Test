@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <!-- Pull the engine from the Quintus CDN or load it locally -->
+    <!-- (use quintus-all.min.js for production) -->
+    <title>EducationApp - Levels</title>
+    <link rel='stylesheet' href='style.css'/>
+
+    <script src='functions_levels.js'></script>
+	<span id="countdown" class="timer"></span>
+<script>
+
+</script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head >
+   <body  onLoad="answersQuestion()">
+      <a id="return" href="../index.html">Home</a>
+      <a id="return2" onclick="location.reload()">Restart</a>
+
+      <div id="resultBox" class="resultBox1"><a id="return" class="buttons" href="../index.html">&#x21b6; </a></div>
+      
+      <div id="main">
+
+        <div id="level"></div>
+        <div id="mainbox">
+        <div id="screen">
+
+		    <div id="question"></div>
+        <div>Answer:</div></br>
+        <button type="button" class="buttons" id="0" onclick="onOptionClick(id)"></button> &nbsp; &nbsp;
+        <button type="button" class="buttons" id="1" onclick="onOptionClick(id)"></button></br></br>
+        <button type="button" class="buttons" id="2" onclick="onOptionClick(id)"></button>   &nbsp;  &nbsp; 
+        <button type="button" class="buttons" id="3" onclick="onOptionClick(id)"></button></br><br><br><br>
+		    <div class="buttons" id="correctAnswers"></div>
+        <div class="buttons" id="streak"></div>
+        <div class="buttons" id="error"></div>
+        </div>
+      </div>
+
+   </body>
+</html>

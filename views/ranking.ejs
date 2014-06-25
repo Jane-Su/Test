@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Education App - Ranking</title>
+    <link rel='stylesheet' href='stylesheets/style.css'>
+  </head>
+<body>
+<h1> RANKING </h1>
+
+<div id="dataTable" style="margin:0 auto;" />
+
+<script> 				
+								
+		var data = JSON.parse('<%-JSON.stringify(tablelist) %>');
+		
+	var table_str= '<table class="CSSTable"><tr>';			
+		
+		var alreadyInserted = false;		
+		
+		 for (var key in data) {
+			  var item = data[key];			
+				
+					if(!alreadyInserted){
+					
+						  for (var key2 in item) {
+						  
+						  table_str += '<td>'+key2+'</td>';						
+							  
+						  }
+						  
+						  table_str+='</tr>';					  
+					}
+					
+					alreadyInserted = true;
+					  
+					   table_str += '<tr>';
+					   
+					   for (var key2 in item) {					  
+					  
+						table_str += '<td>'+item[key2]+'</td>';
+					      
+					  }
+					  
+					  table_str += '</tr>';					  
+			  
+			}
+			
+			table_str +=  '</table>';
+	
+		document.getElementById("dataTable").innerHTML = table_str;		
+				
+			 </script>
+
+</body>
+</html>

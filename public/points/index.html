@@ -1,0 +1,27 @@
+<html>
+  <head>   
+	
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script src='functions_points.js'></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<span id="countdown" class="timer"></span>	
+	
+  </head >
+   <body onLoad="answersQuestion()">
+      
+      <div id="screen">
+		<div id="clock">0:10</div>
+        <div id="question"></div>
+        <div>Answer:</div>
+		
+        <div class="buttons" id="0" onclick="onOptionClick(id)"></div>&nbsp;  &nbsp; 
+        <div class="buttons" id="1" onclick="onOptionClick(id)"></div></br></br>
+        <div class="buttons" id="2" onclick="onOptionClick(id)"></div>&nbsp;  &nbsp; 
+        <div class="buttons" id="3" onclick="onOptionClick(id)"></div></br></br>
+		
+      </div>
+	  <br></br>
+	  <div class="buttons" id="correctAnswers">0</div> 
+	  <div class="buttons" id="wrongAnswers">0</div>
+   </body>
+</html>

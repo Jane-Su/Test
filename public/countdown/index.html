@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <!-- Pull the engine from the Quintus CDN or load it locally -->
+    <!-- (use quintus-all.min.js for production) -->
+    <script src='functions_countdown.js'></script>
+	<span id="countdown" class="timer"></span>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head >
+   <body onLoad="answersQuestion()">      
+		  <div id= "screen">
+        <div id="question"></div>
+<!--////////////////////////DIV OF THE CLOCK ///////////////////////////////-->
+        <div class="timer">
+           <svg class="rotate" viewbox="0 0 250 250">
+             <path id="loader" transform="translate(125, 125)"/>
+           </svg>
+           <div class="dots">
+             <span class="time deg0"></span>
+             <span class="time deg45"></span>
+             <span class="time deg90"></span>
+             <span class="time deg135"></span>
+           </div>
+        </div>
+<!--//////////////////END OF THE DIV OF THE CLOCK ////////////////////////////-->
+              
+            <button type="button" class="buttons" id="0" onclick="onOptionClick(id)"></button> &nbsp; &nbsp;
+            <button type="button" class="buttons" id="1" onclick="onOptionClick(id)"></button></br></br>
+            <button type="button" class="buttons" id="2" onclick="onOptionClick(id)"></button>   &nbsp;  &nbsp; 
+            <button type="button" class="buttons" id="3" onclick="onOptionClick(id)"></button></br>
+		        <div id="rightAnswer"></div>
+      </div></br>
+      Correct Answers:</br> <div class="buttons" id="correctAnswers">0</div> </br></br>
+      <a href="index.html" class="buttons">Restart</a>
+      <a href="../index.html" class="buttons">Home</a>
+
+
+
+<script>
+var seconds = 60;
+var doPlay = true;
+var loader = document.getElementById('loader')
+  , alfa = 0
+  , pi = Math.PI
+  , t = (seconds/360 * 1000);
+
+(function draw() {
+  alfa++;
+  alfa %= 360;
+  var r = ( alfa * pi / 180 )
+    , x = Math.sin( r ) * 125
+    , y = Math.cos( r ) * - 125
+    , mid = ( alfa > 180 ) ? 1 : 0
+    , anim = 'M 0 0 v -125 A 125 125 1 ' 
+           + mid + ' 1 ' 
+           +  x  + ' ' 
+           +  y  + ' z';
+  //[x,y].forEach(function( d ){
+  //  d = Math.round( d * 1e3 ) / 1e3;
+  //});
+ 
+  loader.setAttribute( 'd', anim );
+  
+  if(doPlay){
+    setTimeout(draw, t); // Redraw
+  }
+})();
+</script>
+
+
+
+   </body>
+</html>

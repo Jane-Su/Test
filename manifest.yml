@@ -1,0 +1,8 @@
+---
+applications:
+- name: mathapp
+  memory: 512M
+  instances: 1
+  domain: ng.bluemix.net
+  path: .
+  buildpack: https://github.com/ibmdb/db2nodejsbuildpack

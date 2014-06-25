@@ -1,0 +1,134 @@
+@import url("serviceSpec.css");
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #471e1e;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.buttons {
+	-moz-box-shadow:inset 0px 0px 0px 0px #fff2ff;
+	-webkit-box-shadow:inset 0px 0px 0px 0px #fff2ff;
+	box-shadow:inset 0px 0px 0px 0px #fff2ff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #d6d3d6) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #d6d3d6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d6d3d6');
+	background-color:#ffffff;
+	-webkit-border-top-left-radius:29px;
+	-moz-border-radius-topleft:29px;
+	border-top-left-radius:29px;
+	-webkit-border-top-right-radius:29px;
+	-moz-border-radius-topright:29px;
+	border-top-right-radius:29px;
+	-webkit-border-bottom-right-radius:29px;
+	-moz-border-radius-bottomright:29px;
+	border-bottom-right-radius:29px;
+	-webkit-border-bottom-left-radius:29px;
+	-moz-border-radius-bottomleft:29px;
+	border-bottom-left-radius:29px;
+	text-indent:0px;
+	border:4px solid #b0aeb0;
+	display:inline-block;
+	color:#471e1e;
+	font-family:arial;
+	font-size:16px;
+	font-weight:bold;
+	font-style:normal;
+	height:53px;
+	line-height:45px;
+	width:147px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 0px 0px #ffffff;
+}
+.buttons:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d6d3d6), color-stop(1, #ffffff) );
+	background:-moz-linear-gradient( center top, #d6d3d6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d6d3d6', endColorstr='#ffffff');
+	background-color:#d6d3d6;
+}.buttons:active {
+	position:relative;
+	top:1px;
+}
+.buttons:disabled {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #171017), color-stop(1, #171017) );
+	background:-moz-linear-gradient( center top, #171017 5%, #171017 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#171017', endColorstr='#171017');
+	background-color:#171017;
+}
+
+
+
+.timer {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+.timer .rotate {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+.timer .rotate #loader {
+  fill: #ff6d69;
+}
+.timer .dots {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 15;
+  top: 0;
+  left: 0;
+}
+.timer .dots .time {
+  height: 100%;
+  width: 6%;
+  display: block;
+  background-image: -moz-linear-gradient(#ffc8c6, #ffc8c6 16%, rgba(0, 0, 0, 0) 16%, rgba(0, 0, 0, 0) 84%, #ffc8c6 84%, #ffc8c6);
+  background-image: -webkit-linear-gradient(#ffc8c6, #ffc8c6 16%, rgba(0, 0, 0, 0) 16%, rgba(0, 0, 0, 0) 84%, #ffc8c6 84%, #ffc8c6);
+  background-image: linear-gradient(#ffc8c6, #ffc8c6 16%, rgba(0, 0, 0, 0) 16%, rgba(0, 0, 0, 0) 84%, #ffc8c6 84%, #ffc8c6);
+  margin-left: -3%;
+  left: 50%;
+  position: absolute;
+}
+.timer .dots .time.deg45 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.timer .dots .time.deg90 {
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.timer .dots .time.deg135 {
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+
+#question {
+
+	position: absolute;
+	text-align: center;
+	margin:auto;
+	margin-top:8.4%;
+	left:38%;
+	right:38%;
+	font-size: 4em;
+	z-index:10000;
+
+
+
+}
